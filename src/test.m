@@ -1,0 +1,11 @@
+I = imread(strcat('a1.bmp'));
+        I = (I(:,:,1)+I(:,:,2)+I(:,:,3))/255;
+        display(I);
+        %imshow(I);
+        I = clip(I);
+        display(I);
+        %imshow(I);
+        x = extract_features(I,x);
+        z = zeros(1,26);
+        z(1,a) = 1;
+        y = [y;z];
